@@ -6,3 +6,9 @@ contract FundRaising {
     
 mapping(address=>uint) donations;
     
+
+    constructor(uint _goal, uint _timeLimit) public {
+        owner = msg.sender;
+        goal = _goal;
+        endTime = now + _timeLimit;
+    }
